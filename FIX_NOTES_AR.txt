@@ -1,0 +1,16 @@
+إصلاحات نسخة شغل مخك — إصدار Firebase Build Fix
+
+1) الاحتفاظ بإصلاح تمرير AppScope إلى QuizScreen وResultScreen.
+2) الاحتفاظ بتهيئة Firebase Android وملف الإعداد الخاص بالمشروع shaghel-mokh.
+3) تحديث GitHub Actions إلى إصدارات Node 24 الحالية وتثبيت Flutter stable 3.47.9 وJava 17 لتقليل تغيّر بيئة البناء بين التشغيلات.
+4) جعل إنشاء Android platform files قابلاً للتكرار مع المحافظة على lib وpubspec.yaml وtest.
+5) تعديل إعداد Gradle لضمان applicationId الصحيح ورفع minSdk إلى 24 بما يتوافق مع Firebase Android SDK 35 المستخدم في firebase_core 5.1.0.
+6) ضبط Gradle worker count والذاكرة لتكون مناسبة لبناء GitHub-hosted runner.
+7) إضافة فحص مسبق لوجود google-services.json وتطابق package name وتسجيل Google Services plugin قبل تشغيل Gradle.
+8) إضافة سجل بناء verbose ورفع مخرجات التشخيص عند فشل GitHub Actions.
+
+حدود التحقق:
+- تم التحقق من صياغة Python script باستخدام py_compile.
+- تم اختبار سكربت إعداد Gradle على قوالب Gradle تجريبية Kotlin DSL وGroovy.
+- تم التحقق من صياغة YAML ومن عدم وجود ملفات أصلية محذوفة داخل ZIP.
+- لم يتوفر Flutter/Dart SDK في بيئة إعداد هذه الحزمة؛ لذلك لم يتم تنفيذ flutter pub get أو flutter analyze أو بناء APK فعلي. يجب تشغيل GitHub Actions للتحقق النهائي.
