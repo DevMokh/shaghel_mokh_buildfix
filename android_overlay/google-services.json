@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "55197254643",
+    "project_id": "shaghel-mokh",
+    "storage_bucket": "shaghel-mokh.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:55197254643:android:35a02175b705725ba30886",
+        "android_client_info": {
+          "package_name": "com.shaghelmokh.shaghel_mokh"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyACf58Ag_Ima43ecAXNX57n__sU53hzqyU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
